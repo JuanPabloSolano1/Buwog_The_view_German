@@ -1,0 +1,495 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/js/uikit-icons.min.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Mansalva|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="src/style.css"/>
+    <style>
+    .mapboxgl-marker {
+      background-image: url("map-marker-alt-solid.svg");
+      background-size: cover;
+      cursor: pointer;
+     }
+     * {
+    -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <p class="navbar-brand" href="#">
+    <a href="tel:+49 (30) 3385 3919 15"><img src="phone-solid.svg" width="25" height="25" class="d-inline-block align-top" alt="" style="margin-top: 5px;"></a>
+    <span id="contact-phone">Kontaktieren Sie uns unverbindlich<span id="german-phone">: +49 (30) 3385 3919 15</span></span>
+    <a href="https://www.buwog.de/de/project/reservation/buwog-xbergliving?microsite=true"><img src="envelope-regular.svg" width="25" height="25" class="d-inline-block align-top" alt="" style="margin-top: 5px;"></a>
+    <a href="https://www.buwog.de/de/project/reservation/buwog-xbergliving?microsite=true"><span id="send">Jetzt Anfrage senden</span></a>
+  </p>  
+   </nav>
+    <div class="text-center">
+      <img id="image" src="picture1" class="img-fluid" alt="Responsive image" />
+    </div>
+    <div id="contact">
+      <a href="https://www.buwog.de/de"><p style="color:#747474">Home</p></a>
+      <a href="#services"><p>Projekt Details</p></a>
+      <a href="#location-container"><p>Lage</p></a>
+      <a href="#address"><p>Kontakt</p></a>
+    </div>
+    <div id="container">
+        <div id="main-container" class="carousel-inner">
+          <div id="content" style="background-color: rgba(0, 0, 0, 0.5);">
+            <!-- <h1 id="title">BUWOG THE VIEW</h1> -->
+            <div id="text">
+                <h3 id="home-title">BUWOG THE VIEW- <br>erhält der Südosten Berlins ein architektonisches Highlight am<br>Ufer der Dahme.</h3>
+              <div id="home-text">
+               <p id="home-paragraph">
+                  Das Ensemble vereint in drei Gebäuden insgesamt 63 Eigentumswohnungen mit direktem Blick auf das Wasser
+		  BUWOG The View besteht aus drei einzelnen Gebäuden (Haus I, Haus II, Haus III) und ist der neueste 
+		  Bauabschnitt im nachhaltigen Quartier 52° Nord.   
+                  Project Highlights: 
+                <ul id="home-list">
+                 <li>Alle Wohnungen mit Blick aufs Wasser</li>
+                 <li>Master-Schlafzimmer mit En-Suite-Bad</li>
+                 <li>Tiefgaragen-Plätze optional verfügbar</li>
+                </ul>    
+                </p> 
+              </div>  
+              </div>
+          </div>
+          <div class="carousel-item active">
+            <img
+              style="opacity: 1;"
+              id="images"
+              src="https://drive.google.com/uc?export=view&id=1Nco7NOihE6hWxX38QVOWG6xpwj2UcR9Q"
+              class="img-fluid" alt="Responsive image"
+              alt="..."
+              style=" linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),"
+            />
+          </div>
+        </div>
+        <div id="cards">
+          <h2 style="color:#ec741b;" id="services">
+            Projekt Details
+          </h2>
+          <ul id="list">
+            <div id="battery">
+              <img id="car-battery" src="building-solid.svg" />
+              <br />
+              <h4 class="card-info">Bezugsfertig</h4>
+              <p class="card-text">
+                2020
+              </p>
+              <br />
+            </div>
+            <div id="battery">
+              <img id="car-battery" src="cube-solid.svg" />
+              <br />
+              <h4 class="card-info">Wohnfläche</h4>
+              <p class="card-text">58 m² - 144 m²</p>
+              <br />
+            </div>
+            <div id="battery">
+              <img id="car-battery" src="layer-group-solid.svg" />
+              <br />
+              <h4 class="card-info">Zimmeranzahl</h4>
+              <p class="card-text">2-4</p>
+              <br />
+            </div>
+            <div id="battery">
+                <img id="car-battery" src="search-location-solid.svg" />
+                <br />
+                <h4 class="card-info">Lage</h4>
+                <p class="card-text">Berlin - Grünau</p>
+                <br />
+              </div>
+          </ul>
+        </div>
+        <div>
+            <p>
+              <div class="text-center">
+                <button id="features-button"class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                  Projekt Features
+                </button>
+              </div>  
+              </p>
+              <div class="collapse" id="collapseExample">
+               <div id="features" class="text-center">  
+                 <div>
+                  <img class="feature-check" src="check-square-regular.svg"/><p>Aufzug</p> 
+                  <img class="feature-check" src="check-square-regular.svg"/><p>Bodentiefe Fenster</p>              
+                  <img class="feature-check" src="check-square-regular.svg"/><p>Parkettboden</p>
+                  <img class="feature-check" src="check-square-regular.svg"/><p>Tiefgarage</p>
+                </div>  
+               <div id="feature-text">
+                  <img class="feature-check" src="check-square-regular.svg"/><p>Terrasse</p>
+                  <img class="feature-check" src="check-square-regular.svg"/><p>Fußbodenheizung</p>
+                  <img class="feature-check" src="check-square-regular.svg"/><p>Balkon</p>
+               </div>  
+              </div>  
+              </div>
+        </div>
+        <div id="slider-bg">
+          <div class="slider">
+            <div>
+              <img src="space1.jpg" />
+            </div>
+            <div>
+              <img src="main_pic.jpg" />
+            </div>
+            <div>
+              <img src="space3.jpg" />
+            </div>
+            <div>
+              <img
+              src="https://drive.google.com/uc?export=view&id=1SDspAE5V5-tSEVin9vEx7BFab6oKAoCZ"
+              />
+            </div>
+            <div>
+              <img
+              src="https://drive.google.com/uc?export=view&id=11NJQzRUs9oUR6y_hfUwwp7_uj0z0SHqI"
+              />
+            </div>
+            <div>
+              <img
+              src="https://drive.google.com/uc?export=view&id=158oLNbyQa-J3owfUaVjGy7D-X58xuCqr"
+              />
+            </div>
+            <div>
+              <img
+              src="https://drive.google.com/uc?export=view&id=1eCTmKGetqTBId5WFrXvqbsAZrHE1xdAU"
+              />
+            </div>
+          </div>
+        </div>
+        <div id="house1">
+          <div id="house-color"></div>
+          <h3>Haus I und III</h3>
+          <p>
+            Die Häuser I und III wurden entworfen vom renommierten Architekturbüro PA GmbH Pätzold Architekten, Berlin.
+            Die markante Fassadengestaltung macht die Häuser I und III einzigartig: Natürliches Holz und der maritime 
+	    Charme von Cortenstahl schaffen einen angenehmen Kontrast. Um den Eindruck von Schiffsrümpfen zu verstärken, 
+	    haben die Häuser I und III eine außergewöhnliche Trapezform. Die Anordnungen der Wohnbereiche an den Gebäudeecken 
+	    bietet abwechslungsreiche Ausblicke von allen Wohnungen: Zum Wasser und auch zur Sonnenseite entdecken Sie das Spiel 
+	    der Wellen und das glitzernde Wasser immer wieder neu.
+
+          </p>
+          <img src="https://drive.google.com/uc?export=view&id=1PCS3R03_P2ec5EJZpNxHcBgrCm4XsyKl"/>
+        </div>
+        <div id="house2">
+          <div id="house-color"></div>
+          <h3>Haus II</h3>
+          <p>
+            Haus II der renommierten LOVE Architekten (Graz) besticht mit optisch schwebenden Stegen und öffnet sich mit seiner 
+	    Fassade nach Osten und Westen. Haus II bietet auf westlicher Seite eine besondere Fassade mit modernen Glasfaltwänden, 
+	    die sich komplett öffnen lassen und die Abendsonne einfangen. Genießen Sie eine leichte und offene Atmosphäre und auf 
+	    der Wasserseite den direkten Blick auf das Wellenspiel des Flusses. Hier befinden sich die großen Balkone und Terrassen. 
+	    Sie sind durch die optisch schwebenden Stege verbunden. Die einzigartige Steganlage verbindet die Wohnungen und die großzügigen 
+	    Terrassen, sorgt für Gemeinschaftsflächen, Kommunikation und Erholung.
+
+          </p>
+          <img 
+          src="https://drive.google.com/uc?export=view&id=12zzifjzjBasq_B64adzHc2i0JvLR_-1d"/>
+        </div>
+        <hr>
+        <div id="location-text">
+          <div id="house-color"></div>   
+          <h2 id="get">Lage</h2>  
+          <p class="location">Im Quartier 52° Nord trifft beste Wohnlage im Grünen auf Freizeit und Erholung am Wasser und optimale Anbindung an die City. 
+	        Daher erfreut sich Treptow-Köpenick seit Jahren wachsender Beliebtheit. Dazu trägt die positive wirtschaftliche Entwicklung bei,wie etwa am nahen
+	        Wissenschafts-und Wirtschaftsstandort Adlershof (WISTA). In Deutschlands modernstem Technologiepark mit über 1.000 Übernehmen, 10 Forschungseinrichtungen 
+	        und 6 Hochschulinstituten arbeiten und studieren über 25.000 Menschen. Ab 2019 wird die Allianz Deutschland AG,ihren Berliner Standort auf den neuen Allianz 
+	        Campus nach Adlershof verlegen. Erholsam wohnen im Quartier 52° Nord mit allen Vorteilen der Großstadt in Reichweite:
+
+          <p class="location"> Perfekter Anschluss an die Stadtautobahn (A 113, A 117, A10)</p> 
+          <img
+          style="opacity: 1;"
+          id="location-image"
+          src="https://drive.google.com/uc?export=view&id=1Kt9k_VAUwX_B4IJke6Xo8lxVZP03QQMP"
+          class="img-fluid" alt="Responsive image"
+          alt="..."
+          style=" linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+        ),"
+        /> 
+          <ul id="location-list">
+          <li class="location">Ca. 10 Minuten mit dem Auto zum WISTA, Europas modernstem Technologiepark</li> 
+          <li class="location">Ca. 15 Minuten mit dem Auto zum Flughafen Schönefeld / BER</li>
+          <li class="location">Ca. 40 Minuten ab S-Bahnhof "Grünau“ bis Alexanderplatz, Friedrichstraße, Hauptbahnhof</li>
+          </ul>
+            </p>
+            <div id="map"></div> 
+          </div>
+        <div>
+          <h2 id="get">Jetzt Kontakt aufnehmen und unverbindlich beraten lassen.</h2>
+          <p id="address">
+	         Besuchen Sie auch gerne unseren Infopoint
+
+            Regattastraße 11, 12527 Berlin<br/>
+            +49 (0) 30 - 338 539 1915<br/>
+	          Öffnungszeiten:<br/>
+            Mi. 15-18 Uhr, Sa. + So. 14-16 Uhr<br/>
+	    sowie nach telefonischer Terminvereinbarung
+          </p>
+          <form id="final-form" name="submit-to-google-sheet">
+              <div class="form-group">
+                  <select name="genre" class="form-control">
+                    <option class="form-control"value="Mr">Herr</option>
+                    <option class="form-control"value="Mrs">Frau</option>
+                  </select>
+                 </div> 
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email Adresse</label>
+              <input
+                name="email"
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+        
+                required 
+              />
+            </div>  
+
+            <div class="form-group">
+              <label for="exampleInputPassword1">Vorname</label>
+              <input
+                name="name"
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+          
+                required 
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Nachname</label>
+              <input
+                name="last_name"
+                type="text"
+                class="form-control"
+                id="exampleInputPassword1"
+             
+               required 
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Ihre Nachricht</label>
+                <textarea  id="message"name="message" cols="40" rows="5"></textarea>
+              </div>
+            <button
+              id="button"
+              type="submit"
+              class="btn btn-primary"
+              required 
+            >
+              Persönliche Beratung anfordern
+            </button>
+          </form>
+          <div>
+            <p id="form-private">
+                <input type="checkbox" id="scales" name="scales"
+                >
+               <label for="scales">HIERMIT AKZEPTIERE ICH DIE DATENSCHUTZHINWEISE. *</label>
+               <br>
+                Mit dem Absenden dieses Formulars willige ich ein, dass meine oben eingetragenen Angaben zur Bearbeitung meiner Bewerbung um eine Immobilie sowie Zusendung näherer Angaben zu dieser Immobilie verarbeitet werden. 
+                Die <a id="private-link"href="https://www.buwog.de/de/datenschutz">Datenschutzhinweise</a> der BUWOG habe ich zur Kenntnis genommen.
+            </p>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Form Submission</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  Information Submitted
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/jquery.slick/1.3.11/slick.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      $(".slider").slick({
+        dots: true,
+        infinite: true,
+        arrows: true,
+        cssEase: "linear",
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
+    </script>
+  </body>
+  <div class="footer">
+      <div class="footer-links">
+        <a style="text-decoration:none;" href="https://www.buwog.de/de/datenschutz"><p>DATENSCHUTZ</p></a>
+        <a style="text-decoration:none;" href="https://https://www.buwog.de/de/impressum"><p>IMPRESSUM</p></a>
+ 
+      </div>
+    </div>
+  <script>
+      mapboxgl.accessToken =
+      "pk.eyJ1IjoianVhbnBhYmxvc29sYW5vMTIzIiwiYSI6ImNqeXUzczlidTBhMHQzaHA0a2kyb2xxa2wifQ.kdokesVaSl6MfAYa3j11qw";
+    var map = new mapboxgl.Map({
+      container: "map", // container id
+      style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
+      center: [13.5736508, 52.4269251], // starting position [lng, lat]
+      zoom: 15 // starting zoom
+    });
+    map.addControl(new mapboxgl.NavigationControl());
+    // create a HTML element for each feature
+    var el = document.createElement("div");
+    el.className = "marker";
+    el.style.width = "45px";
+    el.style.height = "60px";
+    el.style.backgroundImage.src = "map-marker-solid.svg";
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el).setLngLat([13.575971, 52.427218]).addTo(map);
+  </script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw60ylJ6B-zmc4ue7KXfwoHk4kps3-nmB_fg2NuusKuZxodFGJ-/exec'
+    const form = document.forms['submit-to-google-sheet']
+    let change = document.querySelector("#button")
+    let checkbox = document.querySelector("#scales")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      if(checkbox.checked == true){
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>
+          console.log('Success!', response))
+          alert("Information Submitted Succesfully") 
+          form.reset() 
+        .catch(error => console.error('Error!', error.message))
+      } else{
+        alert("Please Accept the Data Protection Checkbox")
+      }
+    })
+  </script>
+  <script src="map.js"></script>
+  <script>
+import StylesControl from "mapbox-gl-controls/lib/styles";
+
+// with default styles:
+// with custom styles:
+map.addControl(
+  new StylesControl({
+    styles: [
+      {
+        label: "Streets",
+        styleName: "Mapbox Streets",
+        styleUrl: "mapbox://styles/mapbox/streets-v9"
+      },
+      {
+        label: "Satellite",
+        styleName: "Satellite",
+        styleUrl: "mapbox://styles/mapbox/satellite-v9"
+      }
+    ],
+    onChange: style => console.log(style)
+  }),
+  "top-left"
+);
+  </script>
+</html>
