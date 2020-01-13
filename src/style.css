@@ -51,9 +51,9 @@ form {
 }
 @media only screen and (max-width: 600px) {
   #text {
-    width: 90% !important;
+    width: 94% !important;
     position: absolute;
-    margin-left: 6% !important;
+    margin-left: 3% !important;
     text-align: center !important;
     font-size: 1vw !important;
     padding-bottom: 60px !important;
@@ -77,8 +77,14 @@ form {
 
 @media only screen and (max-width: 600px) {
   #home-list {
-    margin-left: 15px !important;
+    margin-left: 0px !important;
+    font-size: 14px !important;
   }
+}
+
+ol,
+ul {
+  padding-left: 10px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -95,6 +101,10 @@ form {
   }
   #feature-text {
     margin-left: 12px !important;
+  }
+  p#home-paragraph {
+    font-size: 15px !important;
+    word-break: break-word;
   }
 }
 
@@ -420,7 +430,7 @@ p#address {
   color: white !important;
   text-align: justify;
   text-justify: inter-word;
-  word-break: break-all;
+  word-break: break-word;
 }
 #home-list {
   font-weight: bold;
