@@ -3,6 +3,7 @@
 <html>
   <head>
     <!-- UIkit CSS -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>    
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.4/dist/css/uikit.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 <!-- UIkit JS -->
@@ -342,6 +343,9 @@
               Persönliche Beratung anfordern
             </button>
           </form>
+          <div class="text-center">
+            <div class="g-recaptcha" data-sitekey="6LefA88UAAAAAOF-gxHd81lZQJxZePhv4aQW3pz6"></div>
+        </div>   
           <div>
             <p id="form-private">
                 <input type="checkbox" id="scales" name="scales"
@@ -419,7 +423,7 @@
           }
         ]
       });
-    </script>
+    </script> 
   </body>
   <div class="footer">
       <div class="footer-links">
@@ -428,6 +432,11 @@
  
       </div>
     </div>
+  <script>
+  var correctCaptcha = function(response) {
+        alert(response);
+    };
+  </script>
   <script>
       mapboxgl.accessToken =
       "pk.eyJ1IjoianVhbnBhYmxvc29sYW5vMTIzIiwiYSI6ImNqeXUzczlidTBhMHQzaHA0a2kyb2xxa2wifQ.kdokesVaSl6MfAYa3j11qw";
@@ -455,14 +464,16 @@
     let checkbox = document.querySelector("#scales")
     form.addEventListener('submit', e => {
       e.preventDefault()
-      if(checkbox.checked == true){
+      if(checkbox.checked == true && grecaptcha.getResponse() !== ""){
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response =>
           console.log('Success!', response))
           alert("Information Submitted Succesfully") 
           form.reset() 
         .catch(error => console.error('Error!', error.message))
-      } else{
+      }else if(grecaptcha.getResponse() == ""){
+        alert("Please accept the Recaptcha")
+      }else{ 
         alert("Please Accept the Data Protection Checkbox")
       }
     })
