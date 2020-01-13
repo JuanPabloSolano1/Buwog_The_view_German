@@ -89,7 +89,8 @@ form {
 
 @media only screen and (max-width: 600px) {
   #features {
-    margin-left: 20px !important;
+    /* margin-left: 20px !important; */
+    justify-content: center;
     margin-top: 40px !important;
   }
   #feature-text {
@@ -544,7 +545,7 @@ img.feature-check {
 }
 #features {
   display: flex;
-  margin-left: 400px;
+  justify-content: center;
   color: #717273;
 }
 #feature-text {
