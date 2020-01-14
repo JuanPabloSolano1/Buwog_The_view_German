@@ -9,9 +9,29 @@ ul#list {
   text-align: center;
   margin-bottom: 40px;
 }
-
+.language {
+  text-align: center;
+  font-family: "Open Sans", sans-serif !important;
+  color: #717273;
+  margin-right: 5px;
+}
+.language-image {
+  height: 20px;
+  padding-right: 2px;
+  margin-top: -3px;
+  margin-right: 2px;
+}
 .g-recaptcha {
   display: inline-block;
+}
+#language {
+  display: flex;
+  margin-top: -15px;
+  margin-right: 20px;
+}
+
+#language-german {
+  margin-left: 10px;
 }
 form {
   margin: 0 auto;
@@ -80,6 +100,10 @@ form {
     letter-spacing: 0px !important;
     margin-left: 0px !important;
     width: 95% !important;
+  }
+  #language {
+    margin: 0 auto;
+    margin-top: 5px;
   }
 }
 
