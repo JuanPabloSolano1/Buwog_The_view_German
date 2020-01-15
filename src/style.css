@@ -155,12 +155,18 @@ ul {
     margin: 5px 10px;
   }
   #german {
-    margin: 10px 5px;
+    margin: 0 auto;
+  }
+  #english {
+    margin: 0 auto;
   }
   #image {
     margin-top: 120px !important;
     height: auto;
     width: 320px;
+  }
+  ul.navbar-nav.ml-auto {
+    margin-top: 10px;
   }
 }
 
