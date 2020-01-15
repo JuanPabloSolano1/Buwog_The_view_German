@@ -68,17 +68,31 @@
   </head>
   <body>
     <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <p class="navbar-brand" href="#">
-    <a href="tel:+49 (30) 3385 3919 15"><img src="phone-solid.svg" width="25" height="25" class="d-inline-block align-top" alt="" style="margin-top: 5px;"></a>
-    <span id="contact-phone">Kontaktieren Sie uns unverbindlich<span id="german-phone">: +49 (30) 3385 3919 15</span></span>
-    <a href="https://www.buwog.de/de/project/reservation/buwog-xbergliving?microsite=true"><img src="envelope-regular.svg" width="25" height="25" class="d-inline-block align-top" alt="" style="margin-top: 5px;"></a>
-    <a href="https://www.buwog.de/de/project/reservation/buwog-xbergliving?microsite=true"><span id="send">Jetzt Anfrage senden</span></a>
-  </p> 
-  <div  id="language">
-      <a href="https://happy-snyder-b1e3b8.netlify.com/"><div id="language-english"><img class="language-image"src="english.png"/><span class="language">EN</span></div></a><div id="language-german"><img class="language-image"src="flag.png"/><span class="language">GE</span></div>
-   </div> 
-   </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li id ="phone_number"class="nav-item">
+              <a href="tel:+49 (30) 3385 3919 15"><img src="phone-solid.svg" width="25" height="25" class="d-inline-block align-top" alt="" ></a></a>
+              <span id="contact-phone">Kontaktieren Sie uns unverbindlich<span id="german-phone">: +49 (30) 3385 3919 15</span></span>
+            </li>
+            <li id="kontakt""nav-item">
+              <a href="https://www.buwog.de/de/project/reservation/buwog-xbergliving?microsite=true"><img src="envelope-regular.svg" width="25" height="25" class="d-inline-block align-top" alt="" ></a>
+              <a href="https://www.buwog.de/de/project/reservation/buwog-xbergliving?microsite=true"><span id="send">Jetzt Anfrage senden</span></a>
+            </li>
+          </ul>
+            <ul class="navbar-nav ml-auto">
+            <li id="german"class="nav-item">
+              <div id="language-german"><img class="language-image"src="https://res.cloudinary.com/a1986/image/upload/v1579084630/flag_uqgmsp.png"/><span class="language">GE</span></div>
+            </li>
+            <li class="nav-item">
+              <a href="https://happy-snyder-b1e3b8.netlify.com/"><div id="language-english"><img class="language-image"src="https://res.cloudinary.com/a1986/image/upload/v1579084639/english_jzvgq1.png"/><span class="language">EN</span></div></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     <div class="text-center">
       <img id="image" src="picture1.png" class="img-fluid" alt="Responsive image" />
     </div>
@@ -476,7 +490,6 @@
       }
     })
   </script>
-  <script src="map.js"></script>
   <script>
 import StylesControl from "mapbox-gl-controls/lib/styles";
 
