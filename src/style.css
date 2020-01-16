@@ -3,7 +3,7 @@ body {
   overflow-x: hidden;
 }
 div#footer_languages {
-  display: none;
+  visibility: hidden;
 }
 ul#list {
   padding-left: 5px;
@@ -209,6 +209,7 @@ ul {
     display: flex;
     margin-top: -18px;
     margin-right: -3px;
+    visibility: visible !important;
   }
 }
 
