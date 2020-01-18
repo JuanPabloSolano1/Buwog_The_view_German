@@ -81,11 +81,11 @@ form {
 }
 @media only screen and (max-width: 600px) {
   img#images {
-    height: 990px;
+    height: 400px;
     width: 100%;
     background-size: cover;
     overflow: hidden;
-    object-fit: cover;
+    object-fit: fill;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -96,8 +96,9 @@ form {
 }
 @media only screen and (max-width: 600px) {
   #text {
-    width: 94% !important;
-    position: absolute;
+    width: 100% !important;
+    position: relative !important;
+    margin-top: 400px !important;
     margin-left: 3% !important;
     text-align: center !important;
     font-size: 1vw !important;
@@ -107,7 +108,8 @@ form {
 }
 @media only screen and (max-width: 600px) {
   #home-title {
-    font-size: 19px !important;
+    font-size: 16px !important;
+    text-align: center !important;
   }
   .language {
     text-align: center;
@@ -141,7 +143,7 @@ form {
 @media only screen and (max-width: 600px) {
   #home-list {
     margin-left: 0px !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
   .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, 0.5);
@@ -202,8 +204,9 @@ ul {
     margin-left: 12px !important;
   }
   p#home-paragraph {
-    font-size: 16px !important;
-    word-break: break-all;
+    font-size: 15px !important;
+    word-break: break-word;
+    text-align: left;
   }
   #footer_languages {
     display: flex;
