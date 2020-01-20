@@ -143,7 +143,7 @@ form {
 @media only screen and (max-width: 600px) {
   #home-list {
     margin-left: 0px !important;
-    font-size: 14px !important;
+    font-size: 13px !important;
     text-align: center;
     list-style-position: inside;
   }
