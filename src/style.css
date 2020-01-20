@@ -144,6 +144,8 @@ form {
   #home-list {
     margin-left: 0px !important;
     font-size: 14px !important;
+    text-align: center;
+    list-style-position: inside;
   }
   .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, 0.5);
@@ -204,9 +206,9 @@ ul {
     margin-left: 12px !important;
   }
   p#home-paragraph {
-    font-size: 15px !important;
+    font-size: 14px !important;
     word-break: break-word;
-    text-align: left;
+    text-align: center;
   }
   #footer_languages {
     display: flex;
