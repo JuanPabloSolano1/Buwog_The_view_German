@@ -515,6 +515,10 @@ a {
   color: #707173;
   text-decoration: none; /* no underline */
 }
+a:hover {
+  color: #707173;
+  text-decoration: none;
+}
 p#address {
   color: #717273 !important;
 }
@@ -619,7 +623,9 @@ p#address {
   font-size: 15px;
   margin-left: 2px;
   color: #717273;
+  cursor: pointer;
   font-family: "Open Sans", sans-serif;
+  text-decoration: none;
 }
 #send {
   font-size: 15px;
