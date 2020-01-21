@@ -235,7 +235,9 @@ ul {
     /* font-size: 19px; */
     font-size: 0.95rem !important;
     color: #717273;
-    word-break: break-all;
+    text-align: left;
+    word-break: break-word;
+    word-spacing: 3px;
   }
   #house2 {
     width: 380px !important;
@@ -245,7 +247,9 @@ ul {
   #house2 p {
     font-size: 0.95rem !important;
     color: #717273;
-    word-break: break-all;
+    text-align: left;
+    word-break: break-word;
+    word-spacing: 2px;
   }
   form {
     width: 375px !important;
