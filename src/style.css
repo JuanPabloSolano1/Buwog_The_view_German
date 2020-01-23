@@ -144,8 +144,7 @@ form {
   #home-list {
     margin-left: 0px !important;
     font-size: 13px !important;
-    text-align: center;
-    list-style-position: inside;
+    text-align: left;
   }
   .navbar-light .navbar-toggler {
     color: rgba(0, 0, 0, 0.5);
@@ -206,9 +205,9 @@ ul {
     margin-left: 12px !important;
   }
   p#home-paragraph {
-    font-size: 14px !important;
+    font-size: 13px !important;
     word-break: break-word;
-    text-align: center;
+    text-align: justify;
   }
   #footer_languages {
     display: flex;
@@ -258,7 +257,7 @@ ul {
     width: 300px !important;
   }
   #form-private {
-    width: 368px !important;
+    width: 350px !important;
     margin-left: 10px !important;
     font-size: 12px !important;
   }
@@ -301,7 +300,7 @@ ul {
     display: none;
   }
   #form-private {
-    text-align: center;
+    text-align: left;
   }
 }
 #text {
@@ -473,7 +472,7 @@ ul {
   font-family: "Open Sans", sans-serif;
   color: #ec741b;
   margin-bottom: 30px;
-  padding: 10px 35px;
+  padding: 10px 2px;
 }
 #address {
   text-align: center;
@@ -617,7 +616,7 @@ p#address {
   margin-left: -2em;
 }
 #location-list li {
-  word-spacing: -2px;
+  word-spacing: 1px;
 }
 #phone-icon {
   width: 30px;
