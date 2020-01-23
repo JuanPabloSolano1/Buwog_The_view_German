@@ -266,7 +266,7 @@ ul {
     font-size: 0.95rem !important;
     text-align: left;
     word-break: break-word;
-    word-spacing: 3px;
+    word-spacing: 0px !important;
   }
   .footer {
     padding: 0px 6px !important;
