@@ -264,8 +264,10 @@ ul {
   }
   .location {
     width: 300px !important;
-    word-break: break-all;
     font-size: 0.95rem !important;
+    text-align: left;
+    word-break: break-word;
+    word-spacing: 3px;
   }
   .footer {
     padding: 0px 6px !important;
