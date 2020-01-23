@@ -219,7 +219,7 @@ ul {
 
 @media only screen and (max-width: 600px) {
   .slider img {
-    height: 320px !important;
+    height: 311px !important;
   }
   #slider-bg {
     height: 400px !important;
