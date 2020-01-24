@@ -616,7 +616,8 @@ p#address {
   margin-left: -2em;
 }
 #location-list li {
-  word-spacing: 1px;
+  word-spacing: 0px;
+  text-align: left;
 }
 #phone-icon {
   width: 30px;
